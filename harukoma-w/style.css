@@ -82,15 +82,15 @@ input, select {
 vertical-align:middle;
 }
 
-
 /*------------------------
 * Basement
 ------------------------*/
 html {
   overflow: hidden; /*for main__bnr */
-  background:  url(img/bg_pv.gif) no-repeat center center fixed;
+  background:  url(img/bg-pv.gif) no-repeat center center fixed;
   background-size: cover;
   font-size: 62.5%;
+  font-family:sans-serif;
 }
 
 body {
@@ -108,7 +108,11 @@ body::after{
   right: 0;
   bottom: 0;
   background-color: rgba(237, 63, 83, 0.8);
-  z-index: -1;
+  z-index: -100;
+}
+
+img {
+   width: 100%;
 }
 
 .wbfont {
@@ -128,17 +132,17 @@ body::after{
   right: 0;
   bottom: 0;
   margin: auto;
-  width: 750px;
   height: 340px;
 }
 
 .main__logo {
   margin-bottom: 72px;
+  text-align: center;
 }
 
 .main__logo img {
-    width: 748px;
-    height: 201px;
+    /*width: 748px;
+    height: 201px;*/
 }
 
 /*------------------------
@@ -187,7 +191,7 @@ body::after{
 }
 
 .gnav__list__item {
-  margin: 25px;
+  margin-bottom: 25px;
 }
 
 
@@ -233,4 +237,113 @@ body::after{
   text-shadow:
   -1px -1px 1px rgba(0, 0, 0, 0.4),
   1px 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------------
+* viewport > 992px
+----------------------------*/
+
+@media screen and (max-width:991px){
+
+  /*---------------
+  * Main-area
+  -----------------*/
+  .main__logo {
+      max-width: 90%;
+      margin: 0 auto;
+      margin-bottom: 42px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+/*----------------------------
+* viewport > 768px
+----------------------------*/
+@media screen and (max-width:768px){
+
+  /*---------------
+  * Main-area
+  -----------------*/
+  .content {
+    max-height: 60%;
+  }
+
+  .main__logo {
+    margin-bottom: 2.0vh;
+  }
+
+  /*---------------
+  * Contact effect
+  ----------------*/
+  .gnav__list {
+    text-align: center;
+  }
+
+  .gnav__list a {
+    padding: 2.0% 1.0%;
+    font-size: 8.0vmin;
+  }
+
+  .gnav__list__item {
+    margin-bottom: 4.2vh;
+  }
+
+  /*----------------
+  * Footer-area
+  -----------------*/
+  .footer {
+    position: absolute;
+    left:0;
+    right: 0;
+    bottom: 2%;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .footer__hushcopy{
+    display: none;
+  }
+
+  .footer__snsnav {
+    display: block;
+  }
+
+  .footer__snsnav__list__item  {
+    margin: 0;
+    padding: 1% 5%;
+    font-size: 3.0rem;
+  }
+
 }
