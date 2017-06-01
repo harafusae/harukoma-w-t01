@@ -46,6 +46,11 @@ nav ul {
 list-style:none;
 }
 
+p {
+  overflow-wrap:break-word;
+  word-wrap:break-word;
+}
+
 blockquote, q {
 quotes:none;
 }
@@ -144,6 +149,21 @@ img {
 .main__logo img {
     /*width: 748px;
     height: 201px;*/
+}
+
+/*coming soon用*/
+.coming-text {
+  padding: 10%;
+  line-height: 180%;
+  color: #FFF;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.coming-text a{
+  color:crimson;
+  text-decoration: none;
+  background-color: yellow;
 }
 
 /*------------------------
