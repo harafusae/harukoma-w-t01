@@ -5,7 +5,6 @@ Last Updated: 2010-09-17
 Author: Richard Clark - http://richclarkdesign.com
 Twitter: @rich_clark
 */
-
 *,
 *:before,
 *:after {
@@ -82,268 +81,260 @@ input, select {
 vertical-align:middle;
 }
 
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
 /*------------------------
 * Basement
 ------------------------*/
 html {
-  overflow: hidden; /*for main__bnr */
-  background:  url(img/bg-pv.gif) no-repeat center center fixed;
-  background-size: cover;
+  background-color: #FFF;
   font-size: 62.5%;
   font-family:sans-serif;
 }
 
-body {
-  height: 100%;
-}
-
-body::after{
-  content: ' ';
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(237, 63, 83, 0.8);
-  z-index: -100;
-}
-
-img {
-   width: 100%;
-}
-
 .wbfont {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Ubuntu Mono', monospace, sans-serif;
+  letter-spacing: .02em;
+}
+
+.blog__header {
+   width: 945px;
+   margin: 30px auto 0px;
+   padding: 0;
+   line-height: 40px;
+}
+
+.blog__wrapper {
+  width: 780px;
+  margin: 35px auto 0px;
+  padding: 0;
+}
+
+.mr35{
+  margin-right: 35px;
+}
+
+.mr25{
+  margin-right: 25px;
+}
+
+.blog__btn a{
+  display: block;
+  background-color: #ed3f53;
+  color:#FFF;
+  text-align: center;
 }
 
 
 
+/*------------------------
+* Header
+------------------------*/
+.blog__header a {
+  transition-duration: .2s;
+  opacity: 1;
+}
+
+.blog__gnav__list__item {
+    opacity: 1;
+}
+
+.blog__gnav:hover .blog__gnav__list__item:not(:hover) {
+  opacity: 0.5;
+}
+
+
+.blog__main__logo {
+  display: inline-block;
+  margin-right: 45px;
+  vertical-align: bottom;
+}
+
+.blog__gnav {
+  display: inline-block;
+}
+
+.blog__gnav__list {
+  list-style-type: none;
+}
+
+.blog__gnav__list__item {
+  display: inline-block;
+}
+
+.blog__gnav__list__item a {
+  font-size: 1.8rem;
+  color: #ed3f53;
+  text-decoration: none;
+}
+
 
 /*------------------------
-* Main-area
+* Article
 ------------------------*/
-.content {
+
+.blog__newsheader {
+  margin-bottom: 50px;
+}
+
+.blog__site-title {
+  width: 80%;
+  float: left;
+  margin-top: 1.0rem;
+  font-size: 4.8rem;
+  color: #ed3f53;
+}
+
+.blog__profileicon {
+  width: 20%;
+  float: right;
+  text-align: right;
+}
+
+.blog__profileicon a {
+  display: inline-block;
+  position: relative;
+  width: 69px;
+  height: 69px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.blog__profileicon a::before{
   position: absolute;
+  content: ' ';
+  width: 68px;
+  height: 68px;
   top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
-  bottom: 0;
   margin: auto;
-  height: 340px;
+  border-radius: 50%;
+  border: 3px dotted #FFF;
+  background-image: linear-gradient(white, white), linear-gradient(#fe2fb7, #bf19fd);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  transition-timing-function:linear;
 }
 
-.main__logo {
-  margin-bottom: 72px;
-  text-align: center;
+.blog__profileicon a:hover::before {
+  transform: rotateZ( -60deg );
 }
 
-.main__logo img {
-    /*width: 748px;
-    height: 201px;*/
-}
-
-/*------------------------
-* Contact effect
-------------------------*/
-.gnav__list {
-  text-align: center;
-}
-
-.gnav__list a {
-  position: relative;
-  cursor: pointer;
-  padding: 10px;
-  font-size: 3.8rem;
-  text-decoration: none;
-  color: #FFF;
-}
-
-.gnav__list a:hover{
-  color: crimson;
-}
-
-.gnav__list a::after {
-  content: ' ';
-  display: block;
-  width: 100%;
-  height: 100%;
+.blog__profileicon img{
   position: absolute;
-  z-index: -5;
-  left:50%;
-  bottom:0;
-  -webkit-transform: translateX(-50%) skew(-89deg) scaleX(1.5);
-  transform: translateX(-50%) skew(-89deg) scaleX(1.5);
-  opacity: 0;
-  background: #FFF45C;
-  -webkit-transition: all 0.3s cubic-bezier(0.42, 0.08, 0, 1.8);
-  transition: all 0.3s cubic-bezier(0.42, 0.08, 0, 1.8);
-}
-
-.gnav__list a:hover::after {
-  width: 130%;
-  height: 100%;
- -webkit-transform: translateX(-50%) skew(-20deg) scaleX(1);
- transform: translateX(-50%) skew(-20deg) scaleX(1);
- opacity: 1;
-}
-
-.gnav__list__item {
-  margin-bottom: 25px;
+  width: 55px;
+  height: 55px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 50%;
 }
 
 
-/*------------------------
-* Footer-area
-------------------------*/
-.footer {
-  position: absolute;
-  left:20px;
-  bottom:20px;
-  color: #FFF;
+.blog__article {
+  color: #4e4d63;
 }
 
-.footer__hushcopy {
+
+.blog__visual {
+  text-align:center;
+}
+
+.blog__visual img {
+  width:auto;
+  height:auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.blog__entry-title {
+  margin-top: 35px;
+  font-size: 2.4rem;
+  color: #ed3f53;
+}
+
+.blog__entry-meta {
+  margin-top: 25px;
+}
+
+.blog__entry-meta__item {
   display: inline-block;
-  font-size: 1.6rem;
   margin-right: 20px;
 }
 
-.footer__snsnav {
-  display: inline-block;
-  line-height: 30px;
+.meta-dates {
+  color: #3fedd9;
+  font-size: 1.4rem;
 }
 
-.footer__snsnav__list {
-
-}
-
-.footer__snsnav__list__item  {
-  display: inline-block;
-  font-size: 3.0rem;
-  margin-right: 10px;
-}
-
-.footer__snsnav__list__item a {
-  display: block;
-  color: #FFF;
-  opacity: 0.65;
-}
-
-.footer__snsnav__list__item a:hover {
-  opacity: 1.0;
-  text-shadow:
-  -1px -1px 1px rgba(0, 0, 0, 0.4),
-  1px 1px 1px rgba(255, 255, 255, 0.5);
+.meta-tags a {
+  margin-left: 6px;
+  font-size: 1.2rem;
+  color: #4e4d63;
+  text-decoration: none;
+  border-bottom:  1px dotted #AAA;
 }
 
 
+.blog__entry-content {
+  margin-top: 30px;
+  font-size:  1.4rem;
+  letter-spacing: .02em;
+  line-height: 2;
+}
 
+.blog__entry-content p {
+  padding: 10px 0;
+}
 
+.blog__btn-more {
+  width: 196px;
+  height: 45px;
+  line-height: 45px;
+  margin-top:20px;
+}
 
+.blog__btn-more a{
+  font-size: 1.6rem;
+  color:#FFF;
+  text-decoration: none;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*----------------------------
-* viewport > 992px
-----------------------------*/
-
-@media screen and (max-width:991px){
-
-  /*---------------
-  * Main-area
-  -----------------*/
-  .main__logo {
-      max-width: 90%;
-      margin: 0 auto;
-      margin-bottom: 42px;
-  }
-
+.blog__hr {
+  margin: 30px 0;
+  border-top: 1px solid #EEE;
 }
 
 
 
 
+@media screen and (max-width: 1004px){
 
-
-
-
-
-
-/*----------------------------
-* viewport > 768px
-----------------------------*/
-@media screen and (max-width:768px){
-
-  /*---------------
-  * Main-area
-  -----------------*/
-  .content {
-    max-height: 60%;
-  }
-
-  .main__logo {
-    margin-bottom: 2.0vh;
-  }
-
-  /*---------------
-  * Contact effect
-  ----------------*/
-  .gnav__list {
-    text-align: center;
-  }
-
-  .gnav__list a {
-    padding: 2.0% 1.0%;
-    font-size: 8.0vmin;
-  }
-
-  .gnav__list__item {
-    margin-bottom: 4.2vh;
-  }
-
-  /*----------------
-  * Footer-area
-  -----------------*/
-  .footer {
-    position: absolute;
-    left:0;
-    right: 0;
-    bottom: 2%;
+  /*Basement*/
+  .blog__header,
+  .blog__wrapper {
     width: 100%;
-    margin: 0 auto;
-    text-align: center;
+    margin-left:auto;
+    margin-right: auto;
+    padding: 0 8%;
   }
 
-  .footer__hushcopy{
-    display: none;
+  .blog__thumbnail img{
+    width: 100%;
   }
 
-  .footer__snsnav {
-    display: block;
-  }
 
-  .footer__snsnav__list__item  {
-    margin: 0;
-    padding: 1% 5%;
-    font-size: 3.0rem;
+  /*Header*/
+  .blog__site-title {
+    font-size: 8.0vmin;
   }
 
 }
